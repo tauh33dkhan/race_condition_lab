@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Coupon Code Demo</title>
+</head>
+<body>
+    <h1>Coupon Code Demo</h1>
+    <form action="/apply_coupon" method="post">
+        <label for="coupon_code">Coupon Code:</label>
+        <input type="text" id="coupon_code" name="coupon_code">
+        <input type="submit" value="Apply Coupon">
+    </form>
+    <h2>Valid Coupons:</h2>
+    <ul>
+        {% for coupon in valid_coupons %}
+            <li>{{ coupon }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
